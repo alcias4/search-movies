@@ -4,7 +4,7 @@ import {  moviesSearch } from "../service/movies";
 export function useMovies({search}){
   const [movies,setMovies] = useState([]);
   const [loandig, setLoading] = useState(false)
-
+  
   const getMovies = async ()=>{
     try{
       setLoading(true)
