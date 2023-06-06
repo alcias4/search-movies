@@ -1,10 +1,11 @@
 export async function moviesSearch({search}) {
+  const URL_DB = import.meta.env.VITE_URL_DBMOVIE
 
-  const KEY = "17fabdd"
+  const KEY = import.meta.env.VITE_KEY
 
-
+  const URL = `${URL_DB}${KEY}&s=${search}`
   try{
-    const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${search}`)
+    const res = await fetch(URL)
     const datos = await res.json()
 
     const movies = datos.Search
