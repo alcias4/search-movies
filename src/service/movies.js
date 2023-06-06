@@ -4,6 +4,8 @@ export async function moviesSearch({search}) {
   const KEY = import.meta.env.VITE_KEY
 
   const URL = `${URL_DB}${KEY}&s=${search}`
+
+  console.log(URL)
   try{
     const res = await fetch(URL)
     const datos = await res.json()
