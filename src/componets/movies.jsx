@@ -1,11 +1,12 @@
+
 import { useFilter } from "../hooks/useFilter"
 
 
 
-export function Movies({ movies, loandign, tags }) {
+export function Movies({ movies, loandign, tags}) {
+
   const {newMovies, handleLeft, handleRigth,activeLeft,activeRigt} = useFilter({movies, tags})
 
-  
   return (
     <section className="right">
       {

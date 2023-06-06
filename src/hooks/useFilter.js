@@ -7,25 +7,16 @@ export function useFilter({movies, tags}){
   const [activeLeft, setActiveLeft] = useState(false)
   const [activeRigt, setActiveRigth] = useState(false)
 
-
-
   useEffect(() => {
+
+    let { start, final } = { ...intervals }
+    start = 0
+    final = 6
     if(newMovies === []){
       setActiveRigth(true)
     }
 
-    if(tags !== '') {
-      let { start, final } = { ...intervals }
-      start = 0
-      final = 6
-      setInterval({start, final})
-      const newPelis = movies.filter((e)=>{
-        return e.type === tags;
-      })
-      setTolta(newPelis)
-      setNewMovies(newPelis.slice(intervals.start, intervals.final))
-      return
-    }
+    if(movies === undefined || newMovies === undefined) return 
     setNewMovies(movies.slice(intervals.start, intervals.final))
   }, [movies])
 
@@ -33,7 +24,8 @@ export function useFilter({movies, tags}){
 
     let { start, final } = { ...intervals }
     if (start === 0 && final === 6) {
-      return setActiveLeft(false)
+      const f = false
+      return setActiveLeft(f)
     }
     start = start - 6;
     final = final - 6
@@ -43,18 +35,10 @@ export function useFilter({movies, tags}){
   }
 
   const handleRigth = () => {
+    const b = true
     let { start, final } = { ...intervals }
-    setActiveLeft(true)
-    setActiveRigth(true)
-    if(tags !== '' && total !== []){
-      if(total.length <= final ) return setActiveRigth(false)
-      start = start + 6;
-      final = final + 6
-      setInterval({ start, final })
-      const masPelis = total.slice(start, final)
-      setNewMovies(masPelis)
-      return
-    }
+    setActiveLeft(b)
+    setActiveRigth(b)
     start = start + 6;
     final = final + 6
     if (movies.length <= start) return setActiveRigth(false)

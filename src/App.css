@@ -18,17 +18,67 @@ header{
 
 header h1{
   display: flex;
+  align-items: center;
+  font-size: 30px;
   width: 25%;
-  font-weight: 300;
+  font-weight: 400;
+  padding-left: 5%;
+  color: #f08d23;
   
+}
+
+header h1 svg {
+  width: 40px;
 }
 
 header section{
   display: flex;
   width: 75%;
-  align-items: flex-end;
-
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 10%;
 }
+
+header section strong{
+  width: 25%;
+  text-transform: uppercase;
+}
+
+.activeStronge{
+  color: #7ddcca;
+  position: relative;
+  font-size: 20px;
+  transition: all 500ms ease;
+  position: relative;
+}
+
+.activeStronge::after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-color: #7ddcca;
+  border-radius: 50%;
+  bottom: 6px;
+  left: -20px;
+  animation: apar 500ms ease;
+}
+
+
+@keyframes apar {
+  0%{
+    opacity: 0px;
+    width: 0px;
+    height: 0px;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+
 
 
 main{
@@ -69,15 +119,27 @@ main{
   grid-template-columns: repeat(3,1fr);
   align-content: center;
   justify-items: center;
-  gap: 20px;
+  gap: 15px;
   width: 80%;
   height: 100%;
   list-style: none;
 }
 
 .contend-movies li{
-
+  animation: aparicion 800ms linear !important;
   width: 200px;
+}
+
+@keyframes aparicion {
+  0%{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .contend-movies li h3{
@@ -89,8 +151,7 @@ main{
 .contend-movies li img {
   width: 200px;
   height: 230px;
-  border-radius: 10px;
-
+  border-radius: 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.418);
 }
 
