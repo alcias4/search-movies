@@ -108,13 +108,13 @@ export function Navigator({ handleSumbmit, handleChange, search, error, checkFun
 
       <button className='clear'>Clear all</button>
       <footer >
-        <a href="#">
+        <a href="https://github.com/alcias4/search-movies">
           <VscGithub />
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/camilo_andrade04/">
           <FaInstagram />
         </a>
-        <a href="#">
+        <a href="https://twitter.com/camiloand23">
           <FiTwitter />
         </a>
 
