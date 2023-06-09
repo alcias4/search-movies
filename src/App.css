@@ -400,20 +400,78 @@ main{
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 500px){
 
+  header section {
+    width: 100%;
+    justify-content: center;
+    gap: 0px;
+    padding-left: 10%;
+  }
+
+  header section strong{
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .activeStronge{
+    font-size: 14px;
+  }
+
+  .activeStronge::after{
+    width: 10px;
+    height: 10px;
+    left: 0px;
+    bottom: 3px;
+  }
+
+  .activeStronge:nth-child(1)::after{
+    left: 10px;
+  }
+
+  .contend-movies{
+    width: 100%;
+  }
 
   .contend-movies li{
-    width: 150px;
+    width: 100px;
   }
 
   .contend-movies li img{
-    width: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   header h1 {
     left: -5px;
   }
+
+  header h1{
+    top: 13px;
+  }
+
+  .contend {
+    position: relative;
+  }
+
+  .abrir{
+    top: 15px;
+    width: 50px;
+  }
+
+  .contend button{
+    top: 20px;
+    position: absolute;
+  }
+
+  .contend button:nth-child(1){
+    left: 100px;
+  }
+
+  #ri{
+    right: 80px;
+  }
+
 }
 
 

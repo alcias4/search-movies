@@ -46,17 +46,13 @@ function App() {
     getMovies()
   }
 
+  
 
   const tagsFun = (e) =>{
 
     setTags(e)
     
   }
-
-
-
-
-
 
   const handleChange = (e) => {
 
@@ -65,7 +61,9 @@ function App() {
   
   }
 
-
+  const resize = (e) =>{
+    console.log('hello')
+  }
 
 
   return (
@@ -84,7 +82,7 @@ function App() {
             <strong className={tags=="series"? color: null}>Series</strong>
           </section>
         </header>
-        <main>
+        <main onResize={resize}>
           <Navigator year={year} yearFun={yearFun} tagsFun={tagsFun}  check={check} checkFun={checkFun} tags={tags} handleSumbmit={handleSumbmit} handleChange={handleChange} search={search} error={error} />
           <Movies  check={check} tags={tags} movies={movies} loandig={loandig} />
         </main>
