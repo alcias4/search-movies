@@ -46,8 +46,6 @@ function App() {
     getMovies()
   }
 
-  
-
   const tagsFun = (e) =>{
 
     setTags(e)
@@ -61,9 +59,7 @@ function App() {
   
   }
 
-  const resize = (e) =>{
-    console.log('hello')
-  }
+
 
 
   return (
