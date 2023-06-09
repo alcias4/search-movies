@@ -2,7 +2,7 @@
 
 
 
-<h3>Aplicación para buscar peliculas 0 series<h3/>
+<h3>Aplicación para buscar peliculas 0 series</h3>
   
   
 <p>usando</p>
