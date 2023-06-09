@@ -78,7 +78,7 @@ function App() {
             <strong className={tags=="series"? color: null}>Series</strong>
           </section>
         </header>
-        <main onResize={resize}>
+        <main >
           <Navigator year={year} yearFun={yearFun} tagsFun={tagsFun}  check={check} checkFun={checkFun} tags={tags} handleSumbmit={handleSumbmit} handleChange={handleChange} search={search} error={error} />
           <Movies  check={check} tags={tags} movies={movies} loandig={loandig} />
         </main>
