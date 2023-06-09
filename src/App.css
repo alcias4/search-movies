@@ -374,6 +374,10 @@ main{
     grid-template-columns: repeat(2,1fr);
     padding-left: 50px;
   }
+
+  header h1 label {
+    display: none;
+  }
 }
 
 
@@ -396,7 +400,7 @@ main{
 }
 
 
-@media (max-width: 664px){
+@media (max-width: 600px){
 
 
   .contend-movies li{
@@ -405,6 +409,10 @@ main{
 
   .contend-movies li img{
     width: 120px;
+  }
+
+  header h1 {
+    left: -5px;
   }
 }
 
