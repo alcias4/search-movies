@@ -1,3 +1,5 @@
+
+
 .home{
   display: flex;
   flex-direction: column;
@@ -84,6 +86,7 @@ header section strong{
 main{
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 
@@ -112,6 +115,7 @@ main{
   justify-content: center;
   width: 100%;
   height: 100%;
+  gap: 20px;
 }
 
 .contend-movies {
@@ -126,19 +130,17 @@ main{
 }
 
 .contend-movies li{
-  animation: aparicion 800ms linear !important;
+  animation: aparicion 600ms linear !important;
   width: 200px;
 }
 
 @keyframes aparicion {
   0%{
-    transform: scale(0.5);
     opacity: 0;
   }
 
   100%{
     opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -156,17 +158,24 @@ main{
 }
 
 .contend button{
-  width: 58px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
   background: linear-gradient(90deg, rgba(100,111,218,1) 34%, rgba(103,190,213,1) 62%, rgba(89,244,204,1) 100%);
   cursor: pointer;
-  height: 58px;
+  height: 50px;
   border-radius: 50px;
   border: none;
   opacity: 0.5;
   transition: opacity 200ms ease;
   color: white;
 }
+
+.contend button svg{
+  width: 30px;
+}
+
 
 .contend button:hover{
   opacity: 1;
@@ -177,6 +186,7 @@ main{
   gap: 10px;
   font-size: 15px;
   margin-top: 10px;
+  
 }
 
 .tags p{
@@ -187,11 +197,235 @@ main{
   font-weight: 500;
 }
 
+
+
 .tags p:nth-child(1){
   background-color: #734fee;
-
+  
 }
 
 .tags p:nth-child(2){
   background-color: #f08d23;
 }
+
+
+
+@media (max-width: 1380px){
+
+  .left h2, .left section, .form-titulo, .clear, footer, .form-tags{
+    margin-left: var(--maginResonsive);
+  }
+
+  header  h1{
+    padding-left: 3%;
+    color: #7ddcca;
+  }
+}
+
+@media (max-height: 660px){
+
+  .contend-movies li img{
+    height: 150px;
+  }
+
+  .clear{
+    margin-top: 25vh;
+  }
+
+  footer{
+    margin-top: 15%;
+  }
+
+}
+
+@media (max-width: 1135px){
+
+  .form-titulo > input {
+    width: 150px;
+  }
+
+  .contend-check{
+    width: 200px;
+  }
+
+  .contend button{
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .form-input input{
+    width: 150px;
+  }
+  .hola{
+    width: 200px;
+  }
+}
+
+
+@media (max-width: 1000px){
+  .abrir{
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top:  0px;
+    z-index: 10;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    animation: aparecer 600ms ease;
+    cursor: pointer;
+    transition: all 700ms ease;
+
+  }
+
+  .abrir > svg{
+    width: 30px;
+    color: #7ddcca;
+  }
+
+  header > h1{
+    position: absolute;
+    left: -10px;
+    top: 10px;
+  }
+
+
+  .leftResponsive{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 5;
+    animation: aparecer 500ms ease;
+  }
+
+  .leftResponsive section, .form-titulo  input,.contend-check, footer{
+    animation: aparecer 600ms ease;
+  }
+
+  .left h2{
+    animation: aparecer 200ms ease;
+  }
+
+
+
+  .leftRespons {
+    display: none;
+  }
+
+
+  .right{
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 960px){
+
+  .left{
+    width: 210px;
+    font-size: 14px;
+  }
+
+  .form-titulo > input{
+    width: 120px !important;
+  }
+
+  .contend-check{
+    width: 170px !important;
+  }
+
+  .form-input input{
+    width: 120px !important;
+  }
+  .hola{
+    bottom: -120px;
+    width: 170px !important;
+  }
+
+
+  .left h2, .left section, .form-titulo, .clear, footer, .form-tags{
+    margin-left: 8% !important;
+  }
+
+  .abrir{
+    padding-left: 0px;
+  }
+
+  header h1{
+    left: -15px;
+  }
+}
+
+
+@media (max-width: 800px){
+
+
+  .contend-movies li img{
+    width: 150px;
+  }
+
+  .contend-movies{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 50px;
+  }
+}
+
+
+@media (max-width: 664px){
+
+
+  .contend{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+@media (max-width: 664px){
+
+
+  .contend-movies{
+    padding-left: 25px;
+  }
+}
+
+
+@media (max-width: 664px){
+
+
+  .contend-movies li{
+    width: 150px;
+  }
+
+  .contend-movies li img{
+    width: 120px;
+  }
+}
+
+
+
+
+
+@keyframes aparecer {
+  0%{
+    width: 10%;
+    opacity: 0;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+

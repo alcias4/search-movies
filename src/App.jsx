@@ -15,6 +15,7 @@ function App() {
   const { movies, getMovies, loandig } = useMovies({ search,check, tags, year })
   const {color} = useStyle({tags})
 
+
   const yearFun = () =>{
     if(movies.length !== 0){
       setYear(!year)
@@ -66,6 +67,7 @@ function App() {
 
 
 
+
   return (
     <>
       <div className='home'>
@@ -84,7 +86,7 @@ function App() {
         </header>
         <main>
           <Navigator year={year} yearFun={yearFun} tagsFun={tagsFun}  check={check} checkFun={checkFun} tags={tags} handleSumbmit={handleSumbmit} handleChange={handleChange} search={search} error={error} />
-          <Movies check={check} tags={tags} movies={movies} loandig={loandig} />
+          <Movies  check={check} tags={tags} movies={movies} loandig={loandig} />
         </main>
       </div>
     </>

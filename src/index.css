@@ -4,3 +4,15 @@
   box-sizing: border-box;
   font-family: system-ui;
 }
+
+
+@media (max-width: 1380px){
+
+  .left h2, .left section, .form-titulo, .clear, footer{
+    margin-left: var(--maginResonsive);
+  }
+
+  .header > h1{
+    color: aqua;
+  }
+}
