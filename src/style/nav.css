@@ -101,9 +101,10 @@
   border-radius: 0px 4px 4px 0px;
 }
 
-.form-titulo p {
+.error {
   position: absolute;
-  bottom: -50px;
+  top: 300px;
+  left: var(--maginResonsive);
   color: #7ddcca;
 }
 

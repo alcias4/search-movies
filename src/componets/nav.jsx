@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react'
+/* eslint-disable react/prop-types */
+import { useState} from 'react'
 import { VscGithub } from "react-icons/vsc";
 import { FaInstagram } from "react-icons/fa"
 import { FiTwitter } from "react-icons/fi"
@@ -14,7 +15,7 @@ import '../style/nav.css'
 
 
 
-export function Navigator({ handleSumbmit, handleChange, search, error, checkFun, check, tagsFun, year, yearFun }) {
+export function Navigator({ handleSumbmit, handleChange, search,  checkFun, check, tagsFun, year, yearFun }) {
   const [active, setActive] = useState(true)
   const [tagssS, setTags] = useState()
   const [despliegue, setDespliegue] = useState(false);
@@ -71,6 +72,9 @@ export function Navigator({ handleSumbmit, handleChange, search, error, checkFun
         <button className={active ? 'btn active' : 'btn'} onClick={handleClick}>Name</button>
         <button className={!active ? 'btn active' : 'btn'} onClick={handleClickTags}>Tag</button>
       </section>
+      {/* {
+        error && <p className='error'>{error}</p>
+      } */}
       {
         active ? <form className='form-titulo' onSubmit={(e) => { e.preventDefault(); handleSumbmit() }} >
           <input type="text" placeholder='Title movies' onChange={(e => { handleChange(e) })} defaultValue={search} />
@@ -79,9 +83,6 @@ export function Navigator({ handleSumbmit, handleChange, search, error, checkFun
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
             </svg>
           </button>
-          {
-            error && <p>{error}</p>
-          }
           <CheckInput handlemenu={handlemenu} check={check} checkFun={checkFun} year={year} yearFun={yearFun} />
         </form  > :
           <form onSubmit={(e) => { e.preventDefault() }} className='form-tags' >
